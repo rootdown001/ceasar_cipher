@@ -8,7 +8,7 @@ function rot13(str) {
     let endArr = [];
     // declare array for final answer 
     let finalStr = "";
-    console.log(strArr);
+    // console.log(strArr);
 
 
 
@@ -33,7 +33,7 @@ function rot13(str) {
         
         // assign string from 
         let workingStr = strArr[i];
-        console.log(workingStr);
+        // console.log(workingStr);
         let endStr = "";
         // create loop to go through 4 letter segment
         for (let j = 0; j < workingStr.length; j++) {
@@ -46,46 +46,36 @@ function rot13(str) {
    
             // choose letter from array string
             tempLetter = workingStr[j];
-            console.log(tempLetter);
+            // console.log(tempLetter);
 
             // unicode of letter
             startCode = tempLetter.charCodeAt(0);
-            console.log(startCode);
+            // console.log(startCode);
 
             // call codeChange to find new unicode
             endCode = codeChange(startCode);
-            console.log(endCode);
+            // console.log(endCode);
 
             // new letter from new unicode
             newLetter = String.fromCharCode(endCode);
-            console.log(newLetter);
+            // console.log(newLetter);
    
             endStr = endStr + newLetter;
 
-            console.log(endStr);
-   //         console.log(tempLetter)
-   //         console.log(endArr);
+            // console.log(endStr);
+            // console.log(tempLetter)
+            // console.log(endArr);
         }
 
         // add this new string to new array
         endArr.push(endStr);
-        console.log(endArr);
+        //  console.log(endArr);
 
 
     } 
 
     // join endArr to get final string
     finalStr = endArr.join(" ");
-
-    
-    
-    
-    
-
-
-    
-    
-    //console.log(finalStr)
     
     console.log(finalStr);
     return finalStr;
